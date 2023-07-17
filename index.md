@@ -79,9 +79,12 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Arduino uno R3| The arduino board is used for creating and controling electronic projects by running pre-written software code. | $29.99 | <a href= "https://www.amazon.com/ELEGOO-Board-ATmega328P-ATMEGA16U2-Compliant/dp/B01EWOE0UU/ref=sr_1_2_sspa?keywords=arduino+uno&qid=1689602454&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"> Link </a> |
+| ESP-8266 ESP-01 | The ESP8266 is used for allowing devices to connect and communicate with each other and the internet wirelessly. | $8.99 | <a href="https://www.amazon.com/HiLetgo-Wireless-Transceiver-Development-Compatible/dp/B010N1ROQS/ref=sr_1_1_sspa?crid=A14YBZ0VN5AM&keywords=esp8266&qid=1689603294&sprefix=esp8266%2Caps%2C124&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"> Link </a> |
+| Breadboard | used for quickly and easily building and testing electronic circuits without the need for soldering | $Price | <a href="https://www.amazon.com/Breadboards-Solderless-Breadboard-Distribution-Connecting/dp/B07DL13RZH/ref=sr_1_1_sspa?keywords=breadboard&qid=1689603906&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"> Link </a> |
+| Breadboard jumper wires| A breadboard jumper is a short wire with connectors on both ends, used to establish electrical connections between different points on a breadboard | $9.99| <a href="https://www.amazon.com/Solderless-Flexible-Breadboard-Jumper-100pcs/dp/B005TZJ0AM/ref=sr_1_6?crid=32WQ9EBPDKZW5&keywords=breadboard+jumper&qid=1689604452&sprefix=breadboard+jumper%2Caps%2C573&sr=8-6"> Link </a> |
+| soil moisture sensor| What the item is used for | $11.99 | <a href="https://www.amazon.com/Capacitive-Moisture-Corrosion-Resistant-Detection/dp/B07SYBSHGX/ref=sr_1_8?crid=3S5RB1JSWSSC4&keywords=soil+moisture+sensor&qid=1689606335&sprefix=soil+mo%2Caps%2C155&sr=8-8"> Link </a> |
+
 
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
