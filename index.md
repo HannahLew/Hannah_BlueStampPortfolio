@@ -47,22 +47,128 @@ For your first milestone, describe what your project is and how you plan to buil
 - What your plan is to complete your project
 
 # Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser.
 
 # Code
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
+// Template ID, Device Name and Auth Token are provided by the Blynk.Cloud
+// See the Device Info tab, or Template settings
+#define BLYNK_TEMPLATE_ID "TMPL2CH3iQYh3"
+#define BLYNK_TEMPLATE_NAME "Quickstart Template"
+#define BLYNK_AUTH_TOKEN "jiRZp4N6ZknxSm4KzedR-fAp62gOflKZ"
+
+
+// Comment this out to disable prints and save space
+#define BLYNK_PRINT Serial
+
+#include <ESP8266_Lib.h>
+#include <BlynkSimpleShieldEsp8266.h>
+
+char auth[] = BLYNK_AUTH_TOKEN;
+
+// Your WiFi credentials.
+// Set password to "" for open networks.
+char ssid[] = "FIOS-RLPJ-5G";
+char pass[] = "sky2773lori6378wit";
+
+// Hardware Serial on Mega, Leonardo, Micro...
+// #define EspSerial Serial1
+
+// or Software Serial on Uno, Nano...
+#include <SoftwareSerial.h>
+SoftwareSerial EspSerial(2, 3); // RX, TX
+
+// Your ESP8266 baud rate:
+#define ESP8266_BAUD 9600
+
+ESP8266 wifi(&EspSerial);
+
+#include <dht11.h>
+dht11 DHT11;
+#define DHT11_PIN 4
+#define lightPin A0
+#define moisturePin A1
+#define pumpA 8
+
+double roomHumidity = 0;
+double roomTemperature = 0;
+
+BlynkTimer timer;
+
+BLYNK_WRITE(V0)
+{
+  if (param.asInt() == 1) {
+    digitalWrite(pumpA, HIGH);
+  } else {
+    digitalWrite(pumpA, LOW);
+  }
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-
+int readMoisture() {
+  return analogRead(moisturePin);
 }
+
+int readLight() {
+  return analogRead(lightPin);
+}
+
+bool readDHT() {
+  int chk = DHT11.read(DHT11_PIN);
+  switch (chk)
+  {
+    case DHTLIB_OK:
+      roomHumidity = DHT11.humidity;
+      roomTemperature = DHT11.temperature;
+      return true;
+    case DHTLIB_ERROR_CHECKSUM:
+      break;
+    case DHTLIB_ERROR_TIMEOUT:
+      break;
+    default:
+      break;
+  }
+  return false;
+}
+
+void myTimerEvent()
+{
+  bool chk = readDHT();
+  int light = readLight();
+  int moisture = readMoisture();
+  if (chk == true) {
+    Blynk.virtualWrite(V4, roomHumidity);
+    Blynk.virtualWrite(V5, roomTemperature);
+  }
+  Blynk.virtualWrite(V6, light);
+  Blynk.virtualWrite(V7, moisture);
+}
+
+void setup()
+{
+  // Debug console
+  Serial.begin(115200);
+
+  // Set ESP8266 baud rate
+  EspSerial.begin(ESP8266_BAUD);
+  delay(10);
+
+  Blynk.begin(auth, wifi, ssid, pass);
+  // You can also specify server:
+  //Blynk.begin(auth, wifi, ssid, pass, "blynk.cloud", 80);
+  //Blynk.begin(auth, wifi, ssid, pass, IPAddress(192,168,1,100), 8080);
+
+  timer.setInterval(1000L, myTimerEvent);
+
+  pinMode(pumpA, OUTPUT);
+}
+
+void loop()
+{
+  Blynk.run();
+  timer.run(); // Initiates BlynkTimer
+}
+
 ```
 
 # Bill of Materials
