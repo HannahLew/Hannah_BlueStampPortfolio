@@ -5,7 +5,7 @@ When it comes to tending to your plants, even if you find yourself lacking the m
 |:--:|:--:|:--:|:--:|
 | Hannah L | Westfield High School | Electrical Engineering | Incoming Senior
 
-![Headstone Image](IMG_7015.jpg)
+![Picture of me](IMG_7015.jpg)
 
   
 # Final Milestone
