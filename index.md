@@ -26,11 +26,9 @@ Throughout my journey at Bluestamp Engineering, I encountered one of my biggest 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+I have successfully integrated the DHT11 sensor and implemented code to transmit and display humidity, temperature, and light intensity data on the Blynk platform. The DHT11 plays a crucial role in the project as it continuously monitors the plant's surroundings. It's fascinating how the project can connect to the internet and interact with Blynk, allowing convenient control through the Blynk dashboard. During the implementation of the DHT11, I encountered some challenges with the initial library choice, but I resolved this by switching to a suitable library and modifying the code accordingly. To enhance the project's functionality, I plan to add three more components, which will enable me to monitor the soil moisture level and water the plant when it becomes too dry.
+
+
 
 # First Milestone
 
@@ -47,6 +45,11 @@ For your first milestone, describe what your project is and how you plan to buil
 # Schematics 
 **Final Milestone Schematic**
 ![Picture milestone final](wiring_soil_pump.jpg)
+by: Sunfounder
+
+
+**Second Milestone Schematic**
+![Picture milestone final](wiring_dht11.jpg)
 by: Sunfounder
 
 # Code
