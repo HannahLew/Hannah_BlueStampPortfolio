@@ -14,11 +14,9 @@ When it comes to tending to your plants, even if you find yourself lacking the m
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+
+For my final milestone, I successfully integrated the dual motor, mini water pump, and soil moisture sensor into my project. Building on the progress since my last milestone, I implemented code that enables the mini water pump to activate through a button in Blynk. As a result, when the button is toggled on, the water pump starts functioning seamlessly. Additionally, I enhanced the code to enable the soil moisture sensor to retrieve real-time data, which is then conveniently displayed on the Blynk dashboard.
+Throughout my journey at Bluestamp Engineering, I encountered one of my biggest challenges - dealing with constant trial and error. Whenever the code failed to work, my approach involved a systematic process. Firstly, I meticulously checked all the wiring to ensure correctness. Next, I inspected each component to rule out any potential faults. Finally, I double-checked the code for any issues. This problem-solving experience taught me valuable lessons on how to articulate and detail my problems better, leading to more effective solutions. I also learned the importance of seeking help and utilizing available resources effectively. As I move forward, my aspiration is to continue refining my problem-solving skills, aiming to tackle challenges efficiently and effectively.
 
 
 
