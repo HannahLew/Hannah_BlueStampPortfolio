@@ -10,49 +10,34 @@ When it comes to tending to your plants, even if you find yourself lacking the m
   
 # Final Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
 For my final milestone, I successfully integrated the dual motor, mini water pump, and soil moisture sensor into my project. Building on the progress since my last milestone, I implemented code that enables the mini water pump to activate through a button in Blynk. As a result, when the button is toggled on, the water pump starts functioning seamlessly. Additionally, I enhanced the code to enable the soil moisture sensor to retrieve real-time data, which is then conveniently displayed on the Blynk dashboard.
 Throughout my journey at Bluestamp Engineering, I encountered one of my biggest challenges - dealing with constant trial and error. Whenever the code failed to work, my approach involved a systematic process. Firstly, I meticulously checked all the wiring to ensure correctness. Next, I inspected each component to rule out any potential faults. Finally, I double-checked the code for any issues. This problem-solving experience taught me valuable lessons on how to articulate and detail my problems better, leading to more effective solutions. I also learned the importance of seeking help and utilizing available resources effectively. As I move forward, my aspiration is to continue refining my problem-solving skills, aiming to tackle challenges efficiently and effectively.
 
-
-
-# Second Milestone
-
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-I have successfully integrated the DHT11 sensor and implemented code to transmit and display humidity, temperature, and light intensity data on the Blynk platform. The DHT11 plays a crucial role in the project as it continuously monitors the plant's surroundings. It's fascinating how the project can connect to the internet and interact with Blynk, allowing convenient control through the Blynk dashboard. During the implementation of the DHT11, I encountered some challenges with the initial library choice, but I resolved this by switching to a suitable library and modifying the code accordingly. To enhance the project's functionality, I plan to add three more components, which will enable me to monitor the soil moisture level and water the plant when it becomes too dry.
-
-
-
-# First Milestone
-
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-For your first milestone, describe what your project is and how you plan to build it. You can include:
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project
-
-# Schematics 
 **Final Milestone Schematic**
 ![Picture milestone final](wiring_soil_pump.jpg)
 by: Sunfounder
 
 
+# Second Milestone
+
+I have successfully integrated the DHT11 sensor and implemented code to transmit and display humidity, temperature, and light intensity data on the Blynk platform. The DHT11 plays a crucial role in the project as it continuously monitors the plant's surroundings. It's fascinating how the project can connect to the internet and interact with Blynk, allowing convenient control through the Blynk dashboard. During the implementation of the DHT11, I encountered some challenges with the initial library choice, but I resolved this by switching to a suitable library and modifying the code accordingly. To enhance the project's functionality, I plan to add three more components, which will enable me to monitor the soil moisture level and water the plant when it becomes too dry.
+
 **Second Milestone Schematic**
 ![Picture milestone final](wiring_dht11.jpg)
 by: Sunfounder
 
-# Code
+# First Milestone
+
+
+Up to this point, I have successfully configured the ESP8266-01 and established a connection to both the Wi-Fi network and the Blynk platform. This step is crucial as the Blynk dashboard will serve as a centralized display for data from other components. However, the setup of the ESP8266-01 presented significant challenges, mainly due to the module initially being unresponsive. After troubleshooting, I discovered that the Rx and Tx pins were inadvertently switched, causing communication issues. Additionally, I learned that the ESP8266-01 required the EN (Enable) pin to be correctly connected to the 3.3V power source to ensure proper operation.
+
+
+**First Milestone Schematic**
+![Picture milestone first](iot_1_at_set_bb.jpg)
+by: Sunfounder
+
+
+# Final Code For Plant Monitor
 
 ```c++
 // Template ID, Device Name and Auth Token are provided by the Blynk.Cloud
@@ -175,8 +160,6 @@ void loop()
 ```
 
 # Bill of Materials
-Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
-Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
@@ -189,12 +172,3 @@ Don't forget to place the link of where to buy each component inside the quotati
 | Mini water pump| It pumps water | $6.29 | <a href="https://www.amazon.com/Sipytoph-Submersible-Aquariums-Fountain-Hydroponics/dp/B09185Y8BN/ref=sr_1_20_sspa?crid=3Q9IR5KN34LI&keywords=mini+water+pump&qid=1690379049&sprefix=mini+water+%2Caps%2C107&sr=8-20-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&psc=1"> Link </a> |
 | L289n dual motor| used to control and drive the direction and speed of two DC motors | $6.99 | <a href="https://www.amazon.com/Controller-Bridge-Stepper-Control-Drives/dp/B09NRB38QT/ref=sr_1_3?crid=BX478DQGH9A&keywords=l289n+dual+motor&qid=1690379514&sprefix=l289n+dual+motor%2Caps%2C130&sr=8-3"> Link </a> |
 
-
-
-# Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
-
-To watch the BSE tutorial on how to create a portfolio, click here.
